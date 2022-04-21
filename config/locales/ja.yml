@@ -9,7 +9,7 @@ ja:
         first_name_kana: 名（カナ）
         birth_date: 生年月日
       item:
-        image: 商品画像
+        images: 商品画像
         item_name: 商品名
         description: 商品の説明
         category_id: カテゴリー

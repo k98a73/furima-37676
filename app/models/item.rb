@@ -7,10 +7,10 @@ class Item < ApplicationRecord
   belongs_to :days_to_ship
   belongs_to :user
   has_one :record
-  has_one_attached :image
+  has_many_attached :images
 
   with_options presence: true do
-    validates :image
+    validates :images
     validates :item_name, length: { maximum: 40 }
     validates :description, length: { maximum: 1000 }
     validates :price,
@@ -27,4 +27,5 @@ class Item < ApplicationRecord
   end
 
   validates :price, numericality: { only_integer: true, message: "は半角数字を入力してください。" }
+  validates :images, length: { minimum: 1, maximum: 5, message: "は1枚以上5枚以下にしてください" }
 end

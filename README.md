@@ -37,7 +37,7 @@
 
 - belongs_to :user
 - has_one :record
-- has_one_attached :image
+- has_many_attached :images
 
 ## records テーブル
 
