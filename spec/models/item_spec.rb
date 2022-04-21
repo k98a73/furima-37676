@@ -7,14 +7,14 @@ RSpec.describe Item, type: :model do
 
   describe '商品出品' do
     context '商品商品できる時' do
-      it 'image, item_name, description, category, condition, postage, prefecture, days_to_ship, price, userが正しければ出品できる' do
+      it 'images, item_name, description, category, condition, postage, prefecture, days_to_ship, price, userが正しければ出品できる' do
         expect(@item).to be_valid
       end
     end
 
     context '商品出品できない時' do
-      it 'imageが空では出品できない' do
-        @item.image = nil
+      it 'imagesが空では出品できない' do
+        @item.images = nil
         @item.valid?
         expect(@item.errors.full_messages).to include "商品画像を入力してください"
       end
